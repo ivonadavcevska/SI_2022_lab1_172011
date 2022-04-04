@@ -1,0 +1,140 @@
+5. Kreirav txt fajl koj go zacuvav na lokalniot repozitorium na mojot kompjuter i
+potoa napraviv commit so soodvetnata poraka.
+
+6. Go otvoriv fajlot i dodadov kolicini na proizvodite i povtorno napraviv commit 
+so soodvetnata poraka.
+
+7. Vo branch->new branch dodadov dve novi granki: branch1 i branch2.
+
+8. git log
+commit a167b9fbf064d6b4bd8999f0a1ea163403142eb4 (HEAD -> master, branch2, branch
+1)
+Author: ivonadavcevska <ivonadavcevska@yahoo.com>
+Date:   Mon Mar 28 00:49:45 2022 +0200
+
+    Add quantities to the items
+
+commit dcf4893d0e06127f1b932ac4a0c6a29e7dec879b
+Author: ivonadavcevska <ivonadavcevska@yahoo.com>
+Date:   Mon Mar 28 00:45:12 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit b174c51bee314bb665e1375494e0b69615959c4d (origin/master, origin/HEAD)
+Author: ivonadavcevska <100225792+ivonadavcevska@users.noreply.github.com>
+Date:   Sun Mar 27 23:45:53 2022 +0200
+
+    Update README.md
+
+commit 7138878b7a44daf6bec2b794c8dadd55b37c0796
+Author: ivonadavcevska <100225792+ivonadavcevska@users.noreply.github.com>
+Date:   Sun Mar 27 23:36:32 2022 +0200
+
+9. git push --all origin
+
+10. git checkout branch1
+
+11. git commit -am "Change quantity of item #5"
+
+12. git checkout master
+
+13. git commit -am "Change quantity of item #2"
+
+14. git push --all origin
+
+15. git checkout branch2
+
+16. git commit -am "Modify item #4"
+
+17. git log
+commit d028b35bd130bd29b68c4cece37fabc2e3a7a9b2 (HEAD -> branch2)
+Author: ivonadavcevska <ivonadavcevska@yahoo.com>
+Date:   Wed Mar 30 01:10:25 2022 +0200
+
+    Modify item #4
+
+commit a167b9fbf064d6b4bd8999f0a1ea163403142eb4 (origin/branch2)
+Author: ivonadavcevska <ivonadavcevska@yahoo.com>
+Date:   Mon Mar 28 00:49:45 2022 +0200
+
+    Add quantities to the items
+
+commit dcf4893d0e06127f1b932ac4a0c6a29e7dec879b
+Author: ivonadavcevska <ivonadavcevska@yahoo.com>
+Date:   Mon Mar 28 00:45:12 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit b174c51bee314bb665e1375494e0b69615959c4d
+Author: ivonadavcevska <100225792+ivonadavcevska@users.noreply.github.com>
+Date:   Sun Mar 27 23:45:53 2022 +0200
+
+    Update README.md
+
+:...skipping...
+commit d028b35bd130bd29b68c4cece37fabc2e3a7a9b2 (HEAD -> branch2)
+Author: ivonadavcevska <ivonadavcevska@yahoo.com>
+Date:   Wed Mar 30 01:10:25 2022 +0200
+
+    Modify item #4
+
+commit a167b9fbf064d6b4bd8999f0a1ea163403142eb4 (origin/branch2)
+Author: ivonadavcevska <ivonadavcevska@yahoo.com>
+Date:   Mon Mar 28 00:49:45 2022 +0200
+
+    Add quantities to the items
+
+commit dcf4893d0e06127f1b932ac4a0c6a29e7dec879b
+Author: ivonadavcevska <ivonadavcevska@yahoo.com>
+Date:   Mon Mar 28 00:45:12 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit b174c51bee314bb665e1375494e0b69615959c4d
+Author: ivonadavcevska <100225792+ivonadavcevska@users.noreply.github.com>
+Date:   Sun Mar 27 23:45:53 2022 +0200
+
+    Update README.md
+
+commit 7138878b7a44daf6bec2b794c8dadd55b37c0796
+Author: ivonadavcevska <100225792+ivonadavcevska@users.noreply.github.com>
+Date:   Sun Mar 27 23:36:32 2022 +0200
+
+18. git reset --soft HEAD~1
+ git commit -am "Modify item #4 and add item #6"
+
+19. git log
+commit 0bcd0fe1a6a83e61fa8e31b68bcdb74fb22b281c (HEAD -> branch2)
+Author: ivonadavcevska <ivonadavcevska@yahoo.com>
+Date:   Mon Apr 4 19:04:53 2022 +0200
+
+    Modify item #4 and add item #6
+
+commit a167b9fbf064d6b4bd8999f0a1ea163403142eb4 (origin/branch2)
+Author: ivonadavcevska <ivonadavcevska@yahoo.com>
+Date:   Mon Mar 28 00:49:45 2022 +0200
+
+    Add quantities to the items
+
+commit dcf4893d0e06127f1b932ac4a0c6a29e7dec879b
+Author: ivonadavcevska <ivonadavcevska@yahoo.com>
+Date:   Mon Mar 28 00:45:12 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit b174c51bee314bb665e1375494e0b69615959c4d
+Author: ivonadavcevska <100225792+ivonadavcevska@users.noreply.github.com>
+Date:   Sun Mar 27 23:45:53 2022 +0200
+
+    Update README.md
+
+20. git checkout master
+ git merge branch1 
+Ne se sluchija konflikti, spojuvanjeto bese po ort(rekurzivna) strategija
+
+21. git merge branch2
+Se sluchija konflikti vo shopping_list.txt fajlot, kade sto gi prifativme promenite
+napraveni na branch2, spojuvanjeto bese po ort(rekurzivna) strategija
+
+22. git add 172011.txt
+ git commit -m "Add docs"
